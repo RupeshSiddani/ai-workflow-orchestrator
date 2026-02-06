@@ -94,7 +94,30 @@ NEWS_API_KEY=your_news_api_key_here
 
 ## 🏃‍♂️ Running the Project
 
-### Single Command Execution
+### Option 1: FastAPI Web Server
+```bash
+# Start FastAPI server
+uvicorn app:app
+
+# Or with custom host/port
+uvicorn app:app --host 0.0.0.0 --port 8000
+
+# Access the API
+# Web Interface: http://localhost:8000
+# API Docs: http://localhost:8000/docs
+# Health Check: http://localhost:8000/health
+```
+
+### Option 2: Streamlit Web Interface  
+```bash
+# Start Streamlit app
+streamlit run streamlit_app.py
+
+# Access the web interface
+# Web UI: http://localhost:8501
+```
+
+### Option 3: Command Line Interface
 ```bash
 # Run with a specific task
 python main.py "What's the weather in New York?"
@@ -209,6 +232,8 @@ ai_ops_assistant/
 │   ├── test_agents.py  # Agent tests
 │   └── test_tools.py  # Tool tests
 ├── main.py             # Main CLI application
+├── app.py              # FastAPI web server
+├── streamlit_app.py    # Streamlit web interface
 ├── demo.py             # Demonstration script
 ├── config.py           # Configuration management
 ├── requirements.txt    # Python dependencies

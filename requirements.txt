@@ -19,6 +19,11 @@ click>=8.1.0
 rich>=13.6.0
 typer>=0.9.0
 
+# Web Interface
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+streamlit>=1.28.0
+
 # Logging and monitoring
 loguru>=0.7.0
 
